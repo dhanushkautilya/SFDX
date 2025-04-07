@@ -1,6 +1,6 @@
 
 import { LightningElement, wire, track, api } from 'lwc';
-import getUnsoldSkus from '@salesforce/apex/CUSTOMERSKUDATAController.getUnsoldSkus';
+import getUnsoldSkus from '@salesforce/apex/SKUController.getUnsoldSkus';
 import { updateRecord } from 'lightning/uiRecordApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { refreshApex } from '@salesforce/apex';
