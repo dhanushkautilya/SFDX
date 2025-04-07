@@ -1,0 +1,153 @@
+
+.body{
+  height: 500px;
+}
+
+.card-header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color: #f3f2f2;  
+ padding: 10px 15px;
+}
+
+.slds-card {
+ height: 500px; 
+ min-height: 100px; 
+}
+
+.title-container {
+ display: flex;
+ align-items: center;
+ margin-bottom: 5px;
+}
+
+.items{
+ background-color: #f3f2f2;
+     padding-left: 15px;
+  padding-bottom: 8px; 
+ border-bottom: 1px solid #dcdcdc; 
+ margin-bottom: 0px;     
+}
+
+.header-icon {
+ margin-right: 5px;  
+}
+
+.title {
+ font-size: 16px;
+ font-weight: bold;
+ color: #333;
+ margin: 0;
+}
+
+.action-buttons {
+ display: flex;
+ align-items: center;
+}
+
+.bordered-button {
+ border: 1px solid #d8dde6;
+ border-radius: 4px;
+ padding: 6px;
+ margin-left: 8px;
+ background-color: white;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.scrollable-container {
+ 
+ height: 325px;
+ overflow-y: auto;
+ padding-right: 10px;
+ 
+}
+
+
+.lightning-datatable {
+ background-color: white;  
+ 
+}
+
+.slds-table tbody tr {
+ background-color: white;  
+}
+
+.slds-table thead th {
+ background-color: #f3f2f2;  
+ color: #333;  
+}
+
+.slds-table tbody tr:nth-child(even) {
+ background-color: #f9f9f9;  
+}
+.view-all-container {
+ 
+ display: flex;
+ justify-content: center;
+ margin-top: 10px; 
+}
+
+.view-all-link {
+ text-decoration: none;
+ color: #0070d2; 
+ cursor: pointer;
+}
+.card-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+
+
+.header-actions {
+ display: flex;
+ align-items: center; 
+ gap: 10px; 
+}
+
+.search-bar {
+ width: 150px;
+ margin: 0;
+ padding: 0;
+ align-self: center; 
+ height: 65px;
+ box-sizing: border-box; 
+}
+
+.bordered-button {
+ margin-left: 5px;
+}
+.green-disposition {
+ background-color: #A0DBA0; /* Green for Immediate / Open Opportunity */
+}
+
+.blue-disposition {
+ background-color: #99e0ff; /* Blue for Future */
+}
+
+.red-disposition {
+ background-color: #f4cccc; /* Red for Not a Target */
+}
+.lightning-card {
+ border-width: 1px;
+ border-style: solid;
+ border-color: #d8dde6;
+ border-radius: 0.25rem;
+}
+
+.refresh-button {
+ background-color: white;
+ border: 1px lightgray; 
+}
+
+.view-all-container {
+ margin-top: 1px; 
+ 
+}
+.view-all-container a {
+ display: inline-block; 
+ 
+ padding-bottom: 10px; 
+}

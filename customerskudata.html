@@ -1,0 +1,78 @@
+
+
+<template>
+    <lightning-card>
+     <div  class="lightning-card">
+         <div class="card-header">
+            <div class="title-container">
+                <lightning-icon icon-name="standard:custom" size="small" class="header-icon"></lightning-icon>
+                <span class="title">Customer SKU Data ({itemlength})</span>
+            </div>
+
+            <!-- Search bar and action buttons aligned horizontally -->
+            <div class="header-actions">
+            <template if:true={showsearchbar}>   
+                <lightning-input
+                    class="search-bar"
+                    value={searchQuery}
+                    onchange={handleSearch}
+                    placeholder="Search this list..."
+                ></lightning-input>
+            </template>
+            <template if:true={showItems}>
+            <lightning-button-icon
+                icon-name="utility:refresh"
+                class="refresh-button"
+                onclick={handleRefresh}
+            ></lightning-button-icon>
+            </template>   
+            </div>
+
+        </div>
+        
+        <template if:true={showItems}>
+        <div class="items">
+            {itemlength} items. Sorted by {sby}. Filtered By Status. Updated {timeAgo}
+        </div>
+        </template>
+
+        <!-- Spinner -->
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+        </template>
+        <template if:true={isSaving}>
+            <lightning-spinner alternative-text="Saving..." size="small"></lightning-spinner>
+        </template>
+
+
+        <!-- Datatable with scrollable container -->
+        <div onscroll={handleScroll}>
+          <template if:true={showItems}>        
+          <c-customtype360notsold
+            key-field="Id"
+            data={visibleData}
+            columns={columns}
+            draft-values={saveDraftValues} 
+            onsave={handleSave}
+            default-sort-direction={defaultSortDirection}
+            sorted-direction={sortDirection}
+            sorted-by={sortedBy}
+            onsort={onHandleSort}
+            onchange={handleChange}
+            oncellchange={handleCellChange}
+            oncancel={handleCancel}
+            hide-checkbox-column 
+            show-row-number-column>
+          </c-customtype360notsold>
+          </template>
+        </div>
+        
+        <!-- View All button -->
+        <template if:true={showViewAllButton}>
+            <div class="view-all-container">
+                <a  class="slds-text-link"  onclick={handleViewAll}>View All</a>
+            </div>
+        </template>
+       </div>
+    </lightning-card>
+</template>
