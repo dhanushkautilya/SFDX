@@ -1,4 +1,4 @@
-public without sharing class NotSoldController {
+public without sharing class SKUController {
     @AuraEnabled(cacheable=true)
     public static List<Customer_SKU_Heatmap__c> getUnsoldSkus(Id accountId) {
         if (accountId == null) {
