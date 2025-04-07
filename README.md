@@ -7,6 +7,6 @@ DATA BEING DISPLAYED:
  SELECT Id, Product_Name__c, Sales_Disposition__c, New_Potential_ACV__c 
             FROM Customer_SKU_Heatmap__c 
             WHERE Account__c = :accountId  
-            AND ((Status__c = null AND Sales_Disposition__c != null)
-            OR Status__c = 'Not Renewed') WITH SYSTEM_MODE
+            OR Sales_Disposition__c != null
+            OR Status__c = 'Available' WITH SYSTEM_MODE
 This approach ensures a rich, interactive user experience, improving efficiency in managing customer SKU data.
